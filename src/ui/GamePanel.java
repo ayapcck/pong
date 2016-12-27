@@ -35,7 +35,8 @@ public class GamePanel extends JPanel implements MouseListener, MouseMotionListe
     private static final String[] CHEATS =
             {"Full Paddle: LS = 'Q', RS = 'O'",
                     "Add a ball: Spacebar",
-                    "Play closer:"};
+                    //"Play closer:"
+            };
     private enum SCREENS {START, INSTRUCT, CHEAT, SPECIAL}
     private PGame game;
     private Button instructions, instructReturn, toCheatScreen, cheatReturn, enableCheats, cheatCloser,
@@ -142,7 +143,7 @@ public class GamePanel extends JPanel implements MouseListener, MouseMotionListe
             closerYPos += 50;
         }
         cheatCloser.setY((double) closerYPos - 25);
-        cheatCloser.draw(g);
+        //cheatCloser.draw(g);
         if (closerEnabled) checkButton(cheatCloser, g);
         cheatReturn.draw(g);
         enableCheats.draw(g);
